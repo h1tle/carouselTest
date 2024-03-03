@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+<form>
+    <table>
+        <tr>
+            <td>Від кого</td>
+            <td>
+                <input name="from" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>Ваш пароль</td>
+            <td>
+                <input name="password" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>Повторіть пароль</td>
+            <td>
+                <input name="password2" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>Куди</td>
+            <td>
+                <select name="to">
+                    <option></option>
+                    <option value="1">Відділ постачання</option>
+                    <option value="2">Відділ розробки</option>
+                    <option value="3">Директору</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    Повідомлення:
+    <label>
+        <textarea name="message" style="display:block;width:400px;height:80px"></textarea>
+    </label>
+    <input type="button" onclick="validate(this.form)" value="Перевірити">
+</form>
+<script src="EventsForm.js"></script>
+</body>
+</html>

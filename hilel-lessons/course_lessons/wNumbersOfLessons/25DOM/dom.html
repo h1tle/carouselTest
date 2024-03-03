@@ -1,0 +1,157 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Title</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<input id="elem" type="button" value="Press it"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
+<!--&lt;!&ndash;    function handler1(){&ndash;&gt;-->
+<!--&lt;!&ndash;      alert("Handler 1");&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;    function handler2(){&ndash;&gt;-->
+<!--&lt;!&ndash;      alert("Handler 2");&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;    function handler3(){&ndash;&gt;-->
+<!--&lt;!&ndash;      alert("Code After handler 2");&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;    elem.onclick = function (){&ndash;&gt;-->
+<!--&lt;!&ndash;			alert('hello')&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;    elem.addEventListener('click', handler1); // handler1&ndash;&gt;-->
+<!--&lt;!&ndash;    elem.removeEventListener('click', handler2); // handler 2&ndash;&gt;-->
+<!--&lt;!&ndash;    elem.addEventListener('click', handler3); // handler 2&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Приклад preventDefault</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<a href="https://example.com" id="myLink">Link to example.com</a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<script src="domJS.js"></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</html>&ndash;&gt;<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Document</title>-->
+<!--&lt;!&ndash;    <style>&ndash;&gt;-->
+<!--&lt;!&ndash;        div {border: 1px solid #777; padding: 30px; text-align: center;}&ndash;&gt;-->
+<!--&lt;!&ndash;        button {transform: scale(2);}&ndash;&gt;-->
+<!--&lt;!&ndash;        .clicked {background-color: rgba(0, 255, 128, 0.3);}&ndash;&gt;-->
+<!--&lt;!&ndash;    </style>&ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;<div id="first">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div id="second">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div id="third">&ndash;&gt;-->
+<!--&lt;!&ndash;            <button id="clickable">Click me!</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
+<!--&lt;!&ndash;	var divElements = document.querySelectorAll('div'); // 3&ndash;&gt;-->
+<!--&lt;!&ndash;	var button = document.getElementById('clickable'); // 1&ndash;&gt;-->
+<!--&lt;!&ndash;	var clickedElement = null;&ndash;&gt;-->
+<!--&lt;!&ndash;	var clickHandler = function (event) { // e = event&ndash;&gt;-->
+<!--&lt;!&ndash;		console.log(event);&ndash;&gt;-->
+<!--&lt;!&ndash;		if (clickedElement === true) {&ndash;&gt;-->
+<!--&lt;!&ndash;			clickedElement.classList.remove('clicked');&ndash;&gt;-->
+<!--&lt;!&ndash;		}&ndash;&gt;-->
+<!--&lt;!&ndash;		clickedElement = event.currentTarget;&ndash;&gt;-->
+<!--&lt;!&ndash;		clickedElement.classList.add('clicked');&ndash;&gt;-->
+<!--&lt;!&ndash;		debugger; // раскомментировать&ndash;&gt;-->
+<!--&lt;!&ndash;	}&ndash;&gt;-->
+<!--&lt;!&ndash;	for (var i = 0; i < divElements.length; i++) {&ndash;&gt;-->
+<!--&lt;!&ndash;		divElements[i].addEventListener('click', clickHandler);&ndash;&gt;-->
+<!--&lt;!&ndash;	}&ndash;&gt;-->
+<!--&lt;!&ndash;	button.addEventListener('click', clickHandler);&ndash;&gt;-->
+<!--&lt;!&ndash;	document.body.addEventListener('click', clickHandler);&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--<ul>-->
+<!--    <li>Mouse</li>-->
+<!--    <li>Keyboard</li>-->
+<!--    <li>Notebook</li>-->
+<!--    <li>Linter</li>-->
+<!--</ul>-->
+
+<!--&lt;!&ndash;<script src="domJS.js"></script>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page</title>
+</head>
+<body>
+<style>
+    ul{
+        font-size:30px ;
+    }
+</style>
+<ul>
+    <li>Mouse</li>
+    <li>Keyboard</li>
+    <li>Touchpad</li>
+    <li>Notepad</li>
+    <li>Printer</li>
+</ul>
+
+<!--<script>-->
+<!--	const items = document.querySelectorAll('li');-->
+<!--	let pointer = null-->
+<!--	console.log(items);-->
+<!--	const handler = function (e){-->
+<!--		console.log(this.innerText);-->
+<!--		this.style.color ='red';-->
+<!--		this.style.backgroundColor ='yellow';-->
+<!--		this.style.fontWeight = 'bold';-->
+<!--            if (pointer){-->
+<!--	            pointer.style.color ='';-->
+<!--	            pointer.style.fontWeight = '';-->
+<!--	            pointer.style.backgroundColor ='';-->
+<!--            }-->
+<!--	            pointer = this-->
+<!--	}-->
+<!--	items.forEach(item => {-->
+<!--		console.log(item.innerText)-->
+<!--		item.addEventListener('click', handler)-->
+<!--	})-->
+<!--</script>-->
+<script>
+    const list = document.querySelector('ul');
+    let pointer = null
+    console.log(list)
+
+    const handler = function (event){
+      const target = event.target
+      console.log(target.innerText)
+        if (target.nodeName === 'LI'){
+	        target.style.color ='red'
+	        target.style.fontWeight = 'bold'
+	        if (pointer){
+		        pointer.style.color =''
+		        pointer.style.fontWeight = ''
+		        pointer.style.backgroundColor =''
+	        }
+          pointer = target
+        }
+		}
+      list.addEventListener('click', handler)
+</script>
+</body>
+</html>
